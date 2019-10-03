@@ -18,6 +18,7 @@ body{
 .box-1 {
     height: 450px;
     width: auto;
+    height: auto;
     background-image: url(/img/header-bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,6 +43,7 @@ button {
     border: 1px solid #555555;
     color: #ffffff;
     font-size: 1rem;
+    margin-bottom: 2em;
 }
 .experience {
     width: auto;
@@ -57,12 +59,13 @@ button {
     padding: 2rem;
     line-height: 2.2rem;
 }
-#skills-section {
-    display: inline-block;
-    margin: 2px 0 0 0;
-    margin-top: 7px;
-    width: auto;
-    height: auto;
+.skills-section {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: -1em;
+    max-width: 60em;
+    margin: auto;
     overflow: hidden;
 }
 
