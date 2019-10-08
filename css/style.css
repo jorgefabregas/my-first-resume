@@ -10,19 +10,17 @@ body{
     line-height: 1.5rem;
     text-align: center;
 }
-#contenedor {
-    width: 960px;
-    height: 100%;
-    margin: 0 auto;
-}
 .box-1 {
-    height: 450px;
-    width: auto;
+    height: auto;
+    width: 100%;
     background-image: url(/img/header-bg.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     color: aliceblue;
+}
+.link {
+    padding: 0 0 2em 0;
 }
 .name {
     display: block;
@@ -45,7 +43,7 @@ button {
 }
 .experience {
     width: auto;
-    height: 220px;
+    height: auto;
     background-color: #eaeaea;
     padding: 3rem;
     font-weight: 100;
@@ -57,22 +55,17 @@ button {
     padding: 2rem;
     line-height: 2.2rem;
 }
-#skills-section {
-    display: inline-block;
-    margin: 2px 0 0 0;
-    margin-top: 7px;
-    width: auto;
-    height: auto;
-    overflow: hidden;
+.skills-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+    justify-content: center;
 }
 
 #programming {
     width: 300px;
     height: auto;
     background-color: #ffffff;
-    padding: 0px 0px 60px 0px;
-    margin: 0px 0px 0px 5px;
-    float: left;
 }
 #systems {
     padding-top: 30px;
@@ -84,9 +77,6 @@ button {
     width: 300px;
     height: auto;
     background-color: #ffffff;
-    padding: 0px 0px 60px 0px;
-    margin: 0px 0px 0px 5px;
-    float: left;
 }
 #skills {
     padding-top: 30px;
@@ -98,9 +88,6 @@ button {
     width: 300px;
     height: auto;
     background-color: #ffffff;
-    padding: 0px 0px 60px 0px;
-    margin: 0px 0px 0px 5px;
-    float: left;
 }
 #programs {
     padding-top: 30px;
@@ -108,20 +95,22 @@ button {
 #programs-paragraph {
     padding: 30px 30px 0px 30px;
 }
+.personal-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 #contact-info {
-    display: block;
     margin: auto;
     margin-top: 0px;
     width: auto;
     height: auto;
 }
 #employers {
-    width: 550px;
+    width: auto;
     height: auto;
     background-color: #2690d4;
     color: #ffffff;
     padding: 30px 40px;
-    float: left;    
 }
 #digiflex {
     padding: 30px 0 0 0;
@@ -132,13 +121,15 @@ button {
     padding: 10px 0 0 0;
     font-weight: 200;
 }
+.personal-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 #contact {
-    width: 550px;
     height: auto;
     background-color: #ffffff;
     color: #000000;
     padding: 30px 40px;
-    float: left;
 }
 #phone {
     padding: 30px 0 0 0;
@@ -149,19 +140,39 @@ button {
     padding: 10px 0 0 0;
     font-weight: 200;
 }
-#footer {
-    width: auto;
-    height: 300px;
-    background-color: #000000;
-    color: #ffffff;
-}
-#text-footer {
-    display: block;
-    margin: auto;
-    margin-top: 0px;
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: auto;
     height: auto;
-}
-#facebook {
     color: #ffffff;
+    margin: 5em 0;
+}
+#social-media {
+    font-size: 2em;
+    padding: 0 2em 0 2em;
+}
+
+img{
+    width:100%;
+}
+@media screen and (max-width: 768px) {
+    .skills-section {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em; 
+}
+@media screen and (max-width: 500px) {
+    .skills-section {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        justify-content: center; 
+    }
+    .personal-info {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
 }
